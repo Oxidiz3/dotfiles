@@ -17,10 +17,6 @@ require "nvchad.mappings"
   map("n", "<M-j>", "10j", { desc = "Move down 10 lines"})
 
   map("n", "<leader>rc", "<cmd>luafile $MYVIMRC<CR>", { desc = "[r]eload [c]onfig" })
-
-  map("n", "<leader>ff", "<cmd>FzfLua files<CR>", { desc = "[f]ind [f]iles" })
-  map("n", "<leader>fg", "<cmd>FzfLua live_grep<CR>", { desc = "[f]ind using [g]rep" })
-  map("n", "<leader>fb", "<cmd>FzfLua buffers<CR>", { desc = "[f]ind in [b]uffers" })
   map("n", "<leader>rr","<cmd>%s/\r//<CR>", {desc = "[r]emove carriage [r]eturns"})
 
   map("t", "<C-h>", [[<C-\><C-n><C-w>h]], { desc = "Go to left window" })
@@ -28,9 +24,7 @@ require "nvchad.mappings"
   map("t", "<C-k>", [[<C-\><C-n><C-w>k]], { desc = "Go to up window" })
   map("t", "<C-l>", [[<C-\><C-n><C-w>l]], { desc = "Go to right window" })
 
-  map("n", ";;", "<cmd>HopCamelCase<CR>", { desc = "Hop Camel Case" })
-
-  map("n", "<leader>cp", "<cmd>let @+ = expand('%')<CR>", { desc = "[C]opy [p]ath to clipboard" })
+  map("n", "<leader>cp", "<cmd>let @+ = expand('%:p')<CR>", { desc = "[C]opy [p]ath to clipboard" })
   map("n", "<leader>od", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "[o]pen [d]iagnostics" })
 
   -- Also use ]d to go to next diagnostic and [d to go to previous diagnostic. Plus lots of other navigation stuff with [ and ]

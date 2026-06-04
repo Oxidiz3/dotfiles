@@ -11,3 +11,4 @@
 !.tmux/**
 !.tmux
 !SetupSymLinks.fish
+!setup-tools.sh

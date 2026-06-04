@@ -12,25 +12,28 @@ return {
       require "configs.lspconfig"
     end,
   },
-  {
-    "ibhagwan/fzf-lua",
-    -- optional for icon support
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    -- or if using mini.icons/mini.nvim
-    -- dependencies = { "nvim-mini/mini.icons" },
-    ---@module "fzf-lua"
-    ---@type fzf-lua.Config|{}
-    ---@diagnostic disable: missing-fields
-
-    opts = {},
-    lazy = false,
-    ---@diagnostic enable: missing-fields
-  },
+  -- {
+  --   "ibhagwan/fzf-lua",
+  --   -- optional for icon support
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   -- or if using mini.icons/mini.nvim
+  --   -- dependencies = { "nvim-mini/mini.icons" },
+  --   ---@module "fzf-lua"
+  --   ---@type fzf-lua.Config|{}
+  --   ---@diagnostic disable: missing-fields
+  --
+  --   opts = {},
+  --   lazy = false,
+  --   ---@diagnostic enable: missing-fields
+  --   keys = {
+  --     {"<leader>ff", "<cmd>FzfLua files<CR>", mode = "n", { desc = "[f]ind [f]iles" }},
+  --     {"<leader>fg", "<cmd>FzfLua live_grep<CR>", mode = "n", { desc = "[f]ind using [g]rep" }},
+  --     {"<leader>fb", "<cmd>FzfLua buffers<CR>", mode = "n", { desc = "[f]ind in [b]uffers" }},
+  --   }
+  -- },
   {
     "folke/which-key.nvim", lazy = false
   },
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
 
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
@@ -46,6 +49,9 @@ return {
       opts = {
           keys = 'etovxqpdygfblzhckisuran'
       },
-      lazy = false
+      lazy = false,
+      keys = {
+        {";;", "<cmd>HopCamelCase<CR>", mode="n", { desc = "Hop Camel Case" }}
+      },
     },
 }
