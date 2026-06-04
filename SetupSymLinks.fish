@@ -1,36 +1,49 @@
 #!/usr/bin/env fish
 
-# Symlink definitions: (repo_path) (target_path)
+# Format:
+# "path_in_repo:absolute_destination"
 set links \
-    ".tmux"  "$HOME/.tmux" \
+    ".tmux/.tmux.conf:$HOME/.tmux.conf" \
+    ".tmux:$HOME/.tmux"
 
-for i in (seq 1 2 (count $links))
-    set src $links[$i]
-    set dest $links[(math $i + 1)]
+for link in $links
+    set parts (string split ":" $link)
+
+    set src $parts[1]
+    set dest $parts[2]
 
     set src_path (realpath $src)
 
+    if not test -e $src_path
+        echo "ERROR: Source does not exist: $src"
+        continue
+    end
 
-    # ensure parent directory exists
-    set dest_dir (dirname $dest)
-    mkdir -p $dest_dir
+    # Ensure destination parent directory exists
+    mkdir -p (dirname $dest)
 
-    # if link already exists
+    # Destination is already a symlink
     if test -L $dest
-        set existing (readlink $dest)
+        set existing (realpath $dest)
+
         if test "$existing" = "$src_path"
             echo "OK: $dest already linked"
-
             continue
-        else
-            echo "Replacing wrong symlink: $dest"
-            rm $dest
         end
+
+        echo "Replacing incorrect symlink: $dest"
+        rm -f $dest
+
+    # Destination exists as a file or directory
     else if test -e $dest
-        echo "Backing up existing file/folder: $dest -> $dest.backup"
-        mv $dest "$dest.backup"
+        set backup "$dest.backup"
+
+        echo "Backing up existing file/directory:"
+        echo "  $dest -> $backup"
+
+        mv $dest $backup
     end
 
     ln -s $src_path $dest
-    echo "Linked $src_path -> $dest"
+    echo "Linked $dest -> $src_path"
 end
