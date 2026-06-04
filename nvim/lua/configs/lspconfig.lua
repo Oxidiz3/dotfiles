@@ -1,22 +1,17 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "python-lsp-server", "csharp-ls", "javscript", "typescript-language-server" }
-vim.lsp.enable(servers)
+local servers = { "html", "cssls", "pyright", "eslint_d", "eslint-lsp" }
 
 -- read :h vim.lsp.config for changing options of lsp servers 
+--
+local lspconfig = require("lspconfig")
+local defaults = require("nvchad.configs.lspconfig")
 
--- Add root markers for ALL clients
-vim.lsp.config('*', {
-  root_markers = { '.git', '.hg' },
-})
-
--- add capabilities to ALL clients
-  vim.lsp.config('*', {
-  capabilities = {
-    textDocument = {
-      semanticTokens = {
-        multilineTokenSupport = true,
-      }
-    }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = defaults.on_attach,
+    on_init = defaults.on_init,
+    capabilities = defaults.capabilities,
   }
-})
+end
+

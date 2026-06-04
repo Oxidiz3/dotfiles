@@ -26,7 +26,7 @@ return {
     lazy = false,
     ---@diagnostic enable: missing-fields
   },
-  { 
+  {
     "folke/which-key.nvim", lazy = false
   },
   -- test new blink
