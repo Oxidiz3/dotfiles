@@ -8,5 +8,5 @@
 !tmux/
 !nvim/**
 !fish/**
-!tmux/**
-!tmux
+!.tmux/**
+!.tmux
