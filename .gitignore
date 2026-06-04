@@ -3,6 +3,6 @@
 
 # allow directories
 !.gitignore
-!nvim/
-!fish/
-!tmux/
+!nvim/**
+!fish/**
+!tmux/**
