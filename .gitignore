@@ -1,0 +1,8 @@
+# ignore everything
+*
+
+# allow directories
+!.gitignore
+!nvim/
+!fish/
+!tmux/
