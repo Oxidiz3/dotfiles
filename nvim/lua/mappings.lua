@@ -17,7 +17,7 @@ require "nvchad.mappings"
   map("n", "<M-j>", "10j", { desc = "Move down 10 lines"})
 
   map("n", "<leader>rc", "<cmd>luafile $MYVIMRC<CR>", { desc = "[r]eload [c]onfig" })
-  map("n", "<leader>rr","<cmd>%s/\r//<CR>", {desc = "[r]emove carriage [r]eturns"})
+  map("n", "<leader>rr","<cmd>%s/\\r//ge<CR>", {desc = "[r]emove carriage [r]eturns"})
 
   map("t", "<C-h>", [[<C-\><C-n><C-w>h]], { desc = "Go to left window" })
   map("t", "<C-j>", [[<C-\><C-n><C-w>j]], { desc = "Go to down window" })
