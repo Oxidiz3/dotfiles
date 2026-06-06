@@ -1,20 +1,24 @@
 require "nvchad.mappings"
 
--- add yours here
-
--- local M = {}
---
--- M.on_attach = function(client, bufnr)
   local map = vim.keymap.set
+  function DeleteFromAll(keymap)
+    local modes = { "n", "i", "v", "t", "x", "s", "o", "c" }
 
-  -- local opts = function(ldesc)
-  --   return { buffer = bufnr, silent = true, desc = ldesc }
-  -- end
+    for _, mode in ipairs(modes) do
+      local ok, err = pcall(vim.keymap.del, mode, keymap)
+      if not ok and not err:match("No such mapping") then
+        error(err)
+      end
+    end
+  end
 
   map("i", "jk", "<ESC>", { desc = "Exit insert mode"})
 
   map("n", "<M-k>", "10k", { desc = "Move up 10 lines"})
   map("n", "<M-j>", "10j", { desc = "Move down 10 lines"})
+
+  map("v", "<M-k>", "10k", { desc = "Move up 10 lines"})
+  map("v", "<M-j>", "10j", { desc = "Move down 10 lines"})
 
   map("n", "<leader>rc", "<cmd>luafile $MYVIMRC<CR>", { desc = "[r]eload [c]onfig" })
   map("n", "<leader>rr","<cmd>%s/\\r//ge<CR>", {desc = "[r]emove carriage [r]eturns"})

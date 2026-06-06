@@ -26,6 +26,16 @@ return {
      {";;", "<cmd>HopCamelCase<CR>", mode="n", { desc = "Hop Camel Case" }}
    },
   },
+  {
+    'tpope/vim-fugitive',
+    cmd = {
+      "Git",
+      "G",
+      "Gdiffsplit",
+      "Gvdiffsplit",
+      "Gblame",
+    }
+  },
   -- {
   --   "ibhagwan/fzf-lua",
   --   -- optional for icon support
