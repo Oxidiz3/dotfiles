@@ -5,10 +5,11 @@
 !.gitignore
 !nvim/
 !fish/
-!tmux/
 !nvim/**
 !fish/**
 !.tmux/**
 !.tmux
 !SetupSymLinks.fish
 !setup-tools.sh
+
+fish/fish_variables

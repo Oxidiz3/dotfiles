@@ -1,6 +1,18 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "pyright", "eslint_d", "eslint-lsp" }
+vim.lsp.config("omnisharp", {
+  settings = {
+    RoslynExtensionsOptions = {
+      EnableAnalyzersSupport = true,
+      AnalyzeOpenDocumentsOnly = false,
+    },
+    MsBuild = {
+      LoadProjectsOnDemand = false,
+    },
+  },
+})
+
+local servers = { "html", "cssls", "pyright", "eslint_d", "eslint-lsp", "omnisharp" }
 
 vim.lsp.enable(servers)
 
