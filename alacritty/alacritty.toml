@@ -1,0 +1,29 @@
+[general]
+import = [
+  "C:/Users/mecha/.config/alacritty/themes/alacritty-theme/themes/terminal_app.toml"
+]
+
+[window]
+dimensions = { columns = 100, lines = 40 }
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+decorations = "Full"
+opacity = 1.0
+blur = true
+startup_mode = "Windowed"
+decorations_theme_variant = "Dark"
+resize_increments = false
+level = "Normal"
+
+[scrolling]
+history = 20000
+multiplier = 3
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
+size = 12
+offset = { x = 0, y = 0 }
+

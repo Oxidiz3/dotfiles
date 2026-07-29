@@ -1,19 +1,23 @@
-# ignore everything
-*
+# # ignore everything
+# *
 
-# allow directories
-!.gitignore
-!nvim/
-!fish/
-!nvim/**
-!fish/**
-!.tmux/**
-!.tmux
-!SetupSymLinks.fish
-!setup-tools.sh
-!herdr/**
+# # allow directories
+# !.gitignore
+# !nvim/
+# !fish/
+# !nvim/**
+# !fish/**
+# !.tmux/**
+# !.tmux
+# !SetupSymLinks.fish
+# !setup-tools.sh
+# !herdr/
+# !herdr/**
 
-fish/fish_variables
-kilo/kilo.jsonc
-opencode/opencode.jsonc
-alacritty/alacritty.toml
+# fish/fish_variables
+# !kilo/
+# !kilo/kilo.jsonc
+# !opencode/
+# !opencode/**
+# !alacritty/
+# !alacritty/**
