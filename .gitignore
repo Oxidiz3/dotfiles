@@ -11,5 +11,9 @@
 !.tmux
 !SetupSymLinks.fish
 !setup-tools.sh
+!herdr/**
 
 fish/fish_variables
+kilo/kilo.jsonc
+opencode/opencode.jsonc
+alacritty/alacritty.toml
