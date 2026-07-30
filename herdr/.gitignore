@@ -1,6 +1,6 @@
 .plugins.lock
 herdr-client.log
-herd-client.sock
+herdr-client.sock
 herdr-server.log
 herdr.sock
 session.json
