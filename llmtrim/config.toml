@@ -1,0 +1,2 @@
+[compact]
+models = ["haiku", "sonnet"]
