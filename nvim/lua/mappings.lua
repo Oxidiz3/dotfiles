@@ -31,6 +31,11 @@ require "nvchad.mappings"
   map("n", "<leader>cp", "<cmd>let @+ = expand('%:p')<CR>", { desc = "[C]opy [p]ath to clipboard" })
   map("n", "<leader>od", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "[o]pen [d]iagnostics" })
 
+
+  -- Git stuff
+  map('n', '<leader>gw', "<cmd>Gitsigns toggle_word_diff<CR>", {desc = "[g]it [w]orddiff"})
+  map("n", "<leader>g", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "[o]pen [d]iagnostics" })
+
   -- Also use ]d to go to next diagnostic and [d to go to previous diagnostic. Plus lots of other navigation stuff with [ and ]
 
   -- I was going to add a bunch of commands for lsp stuff but they're coverd already. :h vim.lsp
