@@ -31,6 +31,23 @@ require "nvchad.mappings"
   map("n", "<leader>cp", "<cmd>let @+ = expand('%:p')<CR>", { desc = "[C]opy [p]ath to clipboard" })
   map("n", "<leader>od", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "[o]pen [d]iagnostics" })
 
+  local function get_visual_selection()
+    local saved = vim.fn.getreg "v"
+    vim.cmd 'noautocmd sil norm! "vy'
+    local selection = vim.fn.getreg "v"
+    vim.fn.setreg("v", saved)
+    return selection
+  end
+
+  map("v", "<leader>ff", function()
+    local selection = get_visual_selection()
+    require("telescope.builtin").find_files({ default_text = selection })
+  end, { desc = "[f]ind [f]ile of selection" })
+
+  map("v", "<leader>fw", function()
+    require("telescope.builtin").grep_string({ search = get_visual_selection() })
+  end, { desc = "[f]ind [w]ord in selection" })
+
 
   -- Git stuff
   map('n', '<leader>gw', "<cmd>Gitsigns toggle_word_diff<CR>", {desc = "[g]it [w]orddiff"})
