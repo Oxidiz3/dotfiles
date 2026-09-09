@@ -1,0 +1,5 @@
+[soe][BassEnhancer#0]
+amount=3
+bypass=true
+outputGain=-1
+scope=120

@@ -1,0 +1,40 @@
+# Browsers & password managers (caches, sessions, cookies, credentials)
+Bitwarden/
+BraveSoftware/
+chromium/
+google-chrome/
+google-chrome-beta/
+google-chrome-unstable/
+microsoft-edge/
+microsoft-edge-dev/
+mozilla/
+
+# App state & caches
+Cookie/
+StabilityMatrix/
+Omacom/
+obsidian/
+dconf/
+pulse/
+wireplumber/
+freerdp/
+remmina/
+ibus/
+matplotlib/
+yay/
+
+# Editor/app backups
+*.backup.*
+*.bak
+*.bak.*
+
+# Runtime state
+*.pid
+*.sock
+fcitx/dbus/
+fcitx5/conf/cached_layouts
+systemd/user/*.wants/
+
+# Secrets & machine-local state
+*.log
+cookie

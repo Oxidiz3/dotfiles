@@ -1,0 +1,21 @@
+{
+  "includeNeovim": true,
+  "includeVscode": true,
+  "includeZed": true,
+  "includedApps": {
+    "alacritty": true,
+    "btop": true,
+    "chromium": true,
+    "foot": true,
+    "ghostty": true,
+    "hyprland": true,
+    "hyprlock": true,
+    "icons": true,
+    "kitty": true,
+    "neovim": true,
+    "vscode": true,
+    "zed": true
+  },
+  "selectedNeovimConfig": "",
+  "wallpaperFolder": "/home/porter/Wallpapers"
+}
