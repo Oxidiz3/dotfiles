@@ -1,0 +1,55 @@
+{
+  "name": "FantasyCastle",
+  "palette": {
+    "colors": [
+      "#040710",
+      "#749cef",
+      "#e47c77",
+      "#6ab368",
+      "#4775d8",
+      "#d15453",
+      "#309132",
+      "#cfd8e9",
+      "#5b5d63",
+      "#96bfff",
+      "#ff9d97",
+      "#87dd78",
+      "#6896ff",
+      "#ff7471",
+      "#4bbb30",
+      "#d0e4ff"
+    ],
+    "wallpaper": "/home/porter/.local/share/aether/wallpapers/wallhaven-2yl6px.jpg",
+    "extendedColors": {
+      "accent": "#4775d8",
+      "brown": "#985f42",
+      "cursor": "#cfd8e9",
+      "orange": "#6d8a47",
+      "selection_background": "#cfd8e9",
+      "selection_foreground": "#040710"
+    },
+    "additionalImages": [
+      "/home/porter/.local/share/aether/wallpapers/wallhaven-o5p1v9.jpg",
+      "/home/porter/.local/share/aether/wallpapers/wallhaven-we7djr.jpg",
+      "/home/porter/.local/share/aether/wallpapers/wallhaven-2yl6px.jpg",
+      "/home/porter/.local/share/aether/wallpapers/wallhaven-3ljykd.jpg",
+      "/home/porter/.local/share/aether/wallpapers/wallhaven-vq6dll.jpg"
+    ]
+  },
+  "adjustments": {
+    "blackPoint": 0,
+    "brightness": 0,
+    "contrast": 0,
+    "gamma": 1,
+    "highlights": 0,
+    "hueShift": 0,
+    "saturation": 0,
+    "shadows": 0,
+    "temperature": 0,
+    "tint": 0,
+    "vibrance": 0,
+    "whitePoint": 0
+  },
+  "settings": {},
+  "timestamp": 1789097253375
+}

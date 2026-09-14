@@ -30,3 +30,7 @@ require("default.hypr.toggles")
 
 -- Tile the main Steam window instead of floating (overrides Omarchy default float rule).
 o.window("steam", { float = false })
+
+-- HDR compositing makes Omarchy's default window opacity (0.985/0.96) look far
+-- more transparent, so bump it while cm = hdr is enabled on HDMI-A-1.
+o.window({ tag = "default-opacity" }, { opacity = "1.0 0.99" })

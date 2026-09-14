@@ -1,0 +1,44 @@
+{
+  "env": {
+    "PATH": "$(PATH):$(HOME)/.local/bin"
+  },
+  "apps": [
+    {
+      "name": "Desktop",
+      "image-path": "desktop.png",
+      "prep-cmd": [
+        {
+          "do": "sh -c \"/home/porter/.local/bin/monitor-mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT} ${SUNSHINE_CLIENT_FPS}\"",
+          "undo": "/home/porter/.local/bin/monitor-mode revert"
+        }
+      ]
+    },
+    {
+      "name": "Low Res Desktop",
+      "image-path": "desktop.png",
+      "prep-cmd": [
+        {
+          "do": "/home/porter/.local/bin/monitor-mode 1920x1080 120",
+          "undo": "/home/porter/.local/bin/monitor-mode revert"
+        }
+      ]
+    },
+    {
+      "name": "Steam Big Picture",
+      "detached": [
+        "setsid steam steam://open/bigpicture"
+      ],
+      "prep-cmd": [
+        {
+          "do": "",
+          "undo": "setsid steam steam://close/bigpicture"
+        },
+        {
+          "do": "sh -c \"/home/porter/.local/bin/monitor-mode ${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT} ${SUNSHINE_CLIENT_FPS}\"",
+          "undo": "/home/porter/.local/bin/monitor-mode revert"
+        }
+      ],
+      "image-path": "steam.png"
+    }
+  ]
+}

@@ -50,6 +50,13 @@ o.bind("SUPER + I", "Toggle workspace layout", "omarchy-hyprland-workspace-layou
 hl.unbind("SUPER + SHIFT + S")
 o.bind("SUPER + SHIFT + S", "Rectangle screenshot", "omarchy-capture-screenshot region")
 
+-- Extract text (OCR) from a selected screen region to the clipboard
+o.bind("SUPER + SHIFT + T", "Extract text from screen (OCR)", "omarchy-capture-text")
+
+-- Workspace overview (quickshell-overview): Super+` shows all workspaces with
+-- live window previews. Click to focus, drag windows between workspaces.
+o.bind("SUPER + GRAVE", "Workspace overview", "qs ipc -c overview call overview toggle")
+
 -- Add a new binding.
 -- o.bind("SUPER + SHIFT + R", "SSH", "alacritty -e ssh your-server")
 

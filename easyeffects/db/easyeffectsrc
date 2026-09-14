@@ -1,19 +1,19 @@
-[EffectsPipelines]
-bypass=true
-
 [StreamInputs]
 inputDevice=alsa_input.usb-HP__Inc_HyperX_Cloud_III_000000000000-00.mono-fallback
+plugins=pitch#0
+pluginsListWidth=324
 visiblePage=pluginsPage
+visiblePlugin=pitch#0
 
 [StreamOutputs]
 mostUsedPresets=AudioEnhancer
-outputDevice=alsa_output.usb-HP__Inc_HyperX_Cloud_III_000000000000-00.analog-stereo
-plugins=bass_loudness#0
+outputDevice=alsa_output.pci-0000_01_00.1.hdmi-stereo
+plugins=bass_loudness#0,crystalizer#0
 usedPresets=AudioEnhancer:2
 visiblePage=pluginsPage
-visiblePlugin=bass_loudness#0
+visiblePlugin=crystalizer#0
 
 [Window]
 autostartOnLogin=true
-height=832
-width=1517
+height=1324
+width=2400
