@@ -23,6 +23,14 @@ ibus/
 matplotlib/
 yay/
 GIMP/
+LM Studio/
+LM-Studio/
+VirtualBox/
+calibre/
+obs-studio/
+qBittorrent/
+unity3d/
+
 
 # Editor/app backups
 *.backup.*
